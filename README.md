@@ -1,6 +1,5 @@
 # team-code-ctrl
-
-This app will be a quote generator and based off the quote will also provide a link to link list of any and all author / artists/ etc... Works and any related info 
+Works and any related info 
 This application will be used by Record Labels, Indi Artists and Music Right-Holders (as users) to submit their releases for distribution. The application stores submitted files and documents and make it available for admins to download.
 
 
