@@ -1,21 +1,30 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var mongoose = require('mongoose');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
+const mongoose = require('mongoose');
 
-var db = mongoose.connect( 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records', {useNewUrlParser: true});
+let db_url = 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records';
 
-if (db) {
-  console.log('Connected to MongoDb');
-}
+const mongoDb = process.env.MONGODB_URI || db_url;
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+mongoose.connect(mongoDb, {useNewUrlParser: true});
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
 
-var app = express();
+db.on('error', console.error.bind(console, 'MongoDB connection error: '));
+
+
+let indexRouter = require('./routes/index');
+let usersRouter = require('./routes/users');
+let loginRouter = require('./routes/login');
+
+const app = express();
 
 app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -23,5 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/login', loginRouter);
 
 module.exports = app;
