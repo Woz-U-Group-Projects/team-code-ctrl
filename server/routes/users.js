@@ -1,5 +1,6 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const User = require('../models/userModel');
 
 
 router.get('/login', function(req, res, next) {
@@ -16,8 +17,26 @@ router.get('/login', function(req, res, next) {
 });
 
 /* GET route that retrieves a list of users */
-router.get('/users', function(req, res, next) {
-  res.send('hello from the users function');
+router.get('/:id', function(req, res, next) {
+  User.findById(req.params.id, function(err, user) {
+    if(err) return next(err);
+    res.send(user);
+  });
+});
+
+router.post('/register', function(req, res, next){
+  let user = new User(
+    {
+      email: req.body.email,
+      username: req.body.username
+    }
+  );
+  user.save(function(err) {
+    if(err) {
+      return next(err);
+    }
+    res.send('User Registered Successfully');
+  })
 });
 
 module.exports = router;
