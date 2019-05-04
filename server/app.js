@@ -4,11 +4,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-var mongoDB = 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records';
+var db = mongoose.connect( 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records', {useNewUrlParser: true});
 
-mongoose.connect(mongoDB);
-
-var db = mongoose.connection;
+if (db) {
+  console.log('Connected to MongoDb');
+}
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
