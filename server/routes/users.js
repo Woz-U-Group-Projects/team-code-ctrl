@@ -7,11 +7,11 @@ router.get('/login', function(req, res, next) {
   res.json([
     {
       id: 1,
-      email: 'joe@blow.com'
+      email: "joe@blow.com"
     },
     {
       id: 2,
-      email: 'idiot@aol.com'
+      email: "idiot@aol.com"
     }
   ]);
 });
@@ -20,7 +20,7 @@ router.get('/login', function(req, res, next) {
 router.get('/:id', function(req, res, next) {
   User.findById(req.params.id, function(err, user) {
     if(err) return next(err);
-    res.send(user);
+    res.json(user);
   });
 });
 
