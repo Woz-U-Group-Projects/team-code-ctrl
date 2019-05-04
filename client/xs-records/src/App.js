@@ -2,21 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  state = {users: []}
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      users: [],
+    };
+  }
 
   componentDidMount() {
-    fetch('/users/login')
+    fetch('/users/5ccda8748575fd03028a2cd7')
     .then(res => res.json())
-    .then(users => this.setState({users}));
+    .then(data => this.setState({users: data}));
   }
 
   render() {
     return (
       <div className="App">
         <h1>Users</h1>
-        {this.state.users.map(user => 
-          <div key={user.email}>{user.email}</div>
-        )}
+        <ul>
+         <li key={this.state.users._id}>{this.state.users.email}</li>
+        </ul>
       </div>
     );
   }
