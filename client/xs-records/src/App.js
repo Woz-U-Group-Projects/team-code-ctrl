@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import Nav from './components/nav';
+import AppNav from './components/nav';
+import Routes from './routes';
+
 
 class App extends Component {
 
@@ -12,24 +13,14 @@ class App extends Component {
     };
   }
 
-  /* This is fetches the user from the database automatically */
-
-  /*
-  componentDidMount() {
-    fetch('/users/5ccda8748575fd03028a2cd7')
-    .then(res => res.json())
-    .then(data => this.setState({users: data}));
-  }
-  */
-
-
   render() {
     return (
-      <div className="App">
-     </div>
-    );
+      <main role="main" className="App">
+        <AppNav />
+        <Routes />
+      </main>
+      );
   }
-
 }
 
 export default App;
