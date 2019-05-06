@@ -1,11 +1,10 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormText, FormGroup, Label, Input, Button } from 'reactstrap';
 
 class Register extends Component {
 
   render() {
     return (
-      <Fragment>
           <Container fluid>
             <h2 className="text-center"> Register </h2>
               <hr />
@@ -37,7 +36,6 @@ class Register extends Component {
               </Col>
             </Row>
           </Container>
-      </Fragment>
     )
   }
 }
