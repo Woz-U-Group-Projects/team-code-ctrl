@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
         <h1>Users</h1>
         <ul>
-         <li key={this.state.users._id}>{this.state.users.email}</li>
+         <li key={this.state.users._id}>{this.state.users.username}</li>
         </ul>
       </div>
     );
