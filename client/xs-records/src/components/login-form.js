@@ -1,59 +1,67 @@
-import React, { Component,Fragment } from 'react';
-import { Container, Row, Col, Form, FormText, FormGroup, Label, Input, Button } from 'reactstrap';
+import React, { Component } from 'react';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Redirect } from 'react-router-dom';
 
 class LoginForm extends Component {
+
 
   constructor(props) {
     super(props);
 
     this.state = {
-      loggedIn: false,
-      data: []
+      username: '',
+      password: '',
+      message: '',
+      redirect: false,
+      loggedIn: false
     };
-
 
   }
 
-  handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = new FormData(e.target);
-    const body = JSON.stringify({
-      username: data.get('username'),
-      password: data.get('password'),
-    });
+  onChange = (event) => {
+    const state = this.state;
+    state[event.target.name] = event.target.value;
+    this.setState(state);
+  }
 
-    const headers = {
-      'content-type': 'application/json',
-      accept: 'application/json'
-    }
+  handleSubmit = (event) => {
 
-    if(data.get('username')) {
-      await fetch('/users/login', {
-        method: 'POST',
-        headers,
-        body
-      })
-        .then(res => res.json())
-        .then(res => this.setState({loggedIn: res.loggedIn}));
-      history.push('/dashboard');
+    event.preventDefault();
+
+
+    fetch('/users/login', {
+      method: 'post',
+      body: JSON.stringify(this.state),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((res) => res.json())
+      .then((data) => this.setState({redirect: data.redirect, loggedIn: data.redirect}))
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect || this.state.loggedIn) {
+      return <Redirect to="/dashboard" />
     }
   }
 
   render() {
     return (
-
       <Container>
-        <h2 className="text-center">Login</h2>
+        {this.renderRedirect()}
+        <h2 className="text-center">login</h2>
         <Row>
           <Col md={{size: 6, offset: 3}}>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="username">Username</Label>
-                <Input type="text" name="username" id="username" placeholder="Username" />
+                <Input onChange={this.onChange} type="text" name="username" id="username" placeholder="Username" />
               </FormGroup>
               <FormGroup>
                 <Label for="password">Password</Label>
-                <Input type="password" name="password" id="password" placeholder="Password" />
+                <Input onChange={this.onChange} type="password" name="password" id="password" placeholder="Password" />
               </FormGroup>
               <Button type="submit" value="submit">Submit</Button>
             </Form>

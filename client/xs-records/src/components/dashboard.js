@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Fragment } from 'react';
 import { Container, Row, Card, CardBody, CardTitle, CardText, Jumbotron, Col, Button } from 'reactstrap';
 
 
@@ -14,7 +13,7 @@ class Dashboard extends Component {
             <p>Template for a simple marketing or informational website. It includes a large callout 
               called a jumbotron and three supporting pieces of content. Use it as a starting point
               to create something more unique.</p>
-            <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            <p><a className="btn btn-primary btn-lg" href="/" role="button">Learn more &raquo;</a></p>
           </Jumbotron>
         </Row>
         <Row>
