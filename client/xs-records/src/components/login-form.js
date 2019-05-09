@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React, { Component,Fragment } from 'react';
+import { Container, Row, Col, Form, FormText, FormGroup, Label, Input, Button } from 'reactstrap';
 
 class LoginForm extends Component {
 
@@ -7,41 +7,60 @@ class LoginForm extends Component {
     super(props);
 
     this.state = {
-      loggedIn: false
+      loggedIn: false,
+      data: []
     };
+
+
   }
 
-  login = (event) => {
-    event.preventDefault();
-    this.setState({loggedIn: true});
-  }
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const body = JSON.stringify({
+      username: data.get('username'),
+      password: data.get('password'),
+    });
 
-  register = (event) => {
-    event.preventDefault();
-    this.setState({loggedIn: false});
+    const headers = {
+      'content-type': 'application/json',
+      accept: 'application/json'
+    }
+
+    if(data.get('username')) {
+      await fetch('/users/login', {
+        method: 'POST',
+        headers,
+        body
+      })
+        .then(res => res.json())
+        .then(res => this.setState({loggedIn: res.loggedIn}));
+      history.push('/dashboard');
+    }
   }
 
   render() {
-    if ( !this.state.loggedIn ) {
     return (
-      <ul className="navbar-nav">
-        <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2" type="text" placeholder="username" aria-label="Search" />
-          <input className="form-control mr-sm-2" type="password" placeholder="password" aria-label="Search" />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.login}>Login</button>
-        </form>
-      </ul>
-    )
 
-    } else {
-      return (
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="#" onClick={this.register}>Register</a>
-          </li>
-        </ul>
-      )
-    }
+      <Container>
+        <h2 className="text-center">Login</h2>
+        <Row>
+          <Col md={{size: 6, offset: 3}}>
+            <Form onSubmit={this.handleSubmit}>
+              <FormGroup>
+                <Label for="username">Username</Label>
+                <Input type="text" name="username" id="username" placeholder="Username" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="password">Password</Label>
+                <Input type="password" name="password" id="password" placeholder="Password" />
+              </FormGroup>
+              <Button type="submit" value="submit">Submit</Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    )
   }
 }
 
