@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom';
 
 class LoginForm extends Component {
 
-
   constructor(props) {
     super(props);
 
@@ -27,7 +26,6 @@ class LoginForm extends Component {
   handleSubmit = (event) => {
 
     event.preventDefault();
-
 
     fetch('/users/login', {
       method: 'post',
