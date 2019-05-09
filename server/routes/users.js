@@ -6,14 +6,15 @@ const bcrypt = require('bcrypt');
 router.post('/login', function(req, res, next) {
 
   User.findOne({username: req.body.username}, function(err, user) {
-    if(user) {
-      bcrypt.compare(req.body.password, user.password, function() {
-        res.send({loggedIn: true});
-      }); 
-    } else {
-      console.error('oops');
-    }
+    bcrypt.compare(req.body.password, user.password, function(err, bres) {
+      if(bres){
+        res.send({redirect: bres});
+      } else {
+        res.send({redirect: bres});
+      }
+    });
   });
+
 });
 
 /* GET route that retrieves a list of users */
