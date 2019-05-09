@@ -15,22 +15,7 @@ router.post('/login', function(req, res, next) {
     });
   });
 
-<<<<<<< HEAD
 });
-=======
-// router.get('/login', function(req, res, next) {
-//   res.json([
-//     {
-//       id: 1,
-//       email: "joe@blow.com"
-//     },
-//     {
-//       id: 2,
-//       email: "idiot@aol.com"
-//     }
-//   ]);
-// });
->>>>>>> 9978d48d0dcd355c6bad0d1b745008a2b1890fe4
 
 /* GET route that retrieves a list of users */
 router.get('/:id', function(req, res, next) {
@@ -40,7 +25,6 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
-<<<<<<< HEAD
 
 router.post('/register', function(req, res, next){
 
@@ -63,7 +47,8 @@ router.post('/register', function(req, res, next){
     res.send('User Registered Successfully');
   })
 
-=======
+});
+
 router.post('/register', function(req, res, next) {
     let user = new User({
         email: req.body.email,
@@ -75,7 +60,6 @@ router.post('/register', function(req, res, next) {
         }
         res.send('User Registered Successfully');
     })
->>>>>>> 9978d48d0dcd355c6bad0d1b745008a2b1890fe4
 });
 
 module.exports = router;
