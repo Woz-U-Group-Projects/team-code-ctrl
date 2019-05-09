@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-
-
 class Register extends Component {
 
   constructor(props) {
