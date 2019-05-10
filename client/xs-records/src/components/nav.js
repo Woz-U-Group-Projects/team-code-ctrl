@@ -21,6 +21,11 @@ class AppNav extends Component {
                 <NavLink className="font-weight-bold">Register</NavLink>
               </NavItem>
             </LinkContainer>
+            <LinkContainer to="/login">
+              <NavItem>
+                <NavLink className="font-weight-bold">Log In</NavLink>
+              </NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar>
       </Fragment>
