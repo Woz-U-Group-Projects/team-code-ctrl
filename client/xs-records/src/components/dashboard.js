@@ -25,8 +25,8 @@ class Dashboard extends Component {
                 <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
                 <CardText className="mb-4">
                   <ol>
-                    <li> <a href="/">Drop It Like It's Hot (featuring Pharrell) — 4:32</a> </li>
-                    <li> <a href="/">Get 2 Know U (featuring Jelly Roll) — 3:36</a> </li>
+                    <li> <a href="/">Drop It Like It's Hot (featuring Pharrell)</a> </li>
+                    <li> <a href="/">Get 2 Know U (featuring Jelly Roll)</a> </li>
                     
                   </ol>
                 </CardText>
@@ -40,13 +40,13 @@ class Dashboard extends Component {
             <Card color="default">
               <CardImg src="http://epmgaa.media.clients.ellingtoncms.com/img/photos/2016/06/13/1465825178_6e473d50ca73a0ac5058fbd2edce81f4-2_t580.jpg?8f1b5874916776826eb17d7e67de7278c987ca33" alt="Card image cap"></CardImg>
               <CardBody>
-                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 1</CardTitle>
+                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 2</CardTitle>
                 <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
                 <CardText className="mb-4">
                   <ol>
-                    <li> <a href="/">Legend — 3:47</a> </li>
-                    <li> <a href="/">Ten Toes Down — 4:07</a> </li>
-                    <li> <a href="/">Don't Stop — 3:41</a> </li>
+                    <li> <a href="/">Legend</a> </li>
+                    <li> <a href="/">Ten Toes Down</a> </li>
+                    <li> <a href="/">Don't Stop</a> </li>
                   </ol>
                 </CardText>
                 <Row>
@@ -59,13 +59,13 @@ class Dashboard extends Component {
             <Card color="default">
               <CardImg src="https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_Gangsta%29_The_Masterpiece_%28Snoop_Dog_album%29_coverart.jpg" alt="Card image cap"></CardImg>
               <CardBody>
-                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 1</CardTitle>
+                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 2</CardTitle>
                 <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
                 <CardText className="mb-4">
                   <ol>
-                    <li> <a href="/">(Intro) I Love to Give You Light — 2:38</a> </li>
+                    <li> <a href="/">(Intro) I Love to Give You Light</a> </li>
                     <li> <a href="/">Bang Out — 3:05</a> </li>
-                    <li> <a href="/">Drop It Like It's Hot (featuring Pharrell) — 4:32</a> </li>
+                    <li> <a href="/">Drop It Like It's Hot (featuring Pharrell)</a> </li>
                   </ol>
                 </CardText>
                 <Row>
