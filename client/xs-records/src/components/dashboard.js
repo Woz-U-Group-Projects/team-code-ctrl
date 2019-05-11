@@ -21,7 +21,7 @@ class Dashboard extends Component {
             <Card color="default">
               <CardImg src="https://upload.wikimedia.org/wikipedia/en/8/83/SnoopDoggDILIH.jpg" alt="Card image cap"></CardImg>
               <CardBody>
-                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 1</CardTitle>
+                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 1</CardTitle>
                 <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
                 <CardText className="mb-4">
                   <ol>
@@ -40,7 +40,7 @@ class Dashboard extends Component {
             <Card color="default">
               <CardImg src="http://epmgaa.media.clients.ellingtoncms.com/img/photos/2016/06/13/1465825178_6e473d50ca73a0ac5058fbd2edce81f4-2_t580.jpg?8f1b5874916776826eb17d7e67de7278c987ca33" alt="Card image cap"></CardImg>
               <CardBody>
-                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 2</CardTitle>
+                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 2</CardTitle>
                 <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
                 <CardText className="mb-4">
                   <ol>
@@ -59,12 +59,12 @@ class Dashboard extends Component {
             <Card color="default">
               <CardImg src="https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_Gangsta%29_The_Masterpiece_%28Snoop_Dog_album%29_coverart.jpg" alt="Card image cap"></CardImg>
               <CardBody>
-                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Albume 2</CardTitle>
+                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 3</CardTitle>
                 <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
                 <CardText className="mb-4">
                   <ol>
                     <li> <a href="/">(Intro) I Love to Give You Light</a> </li>
-                    <li> <a href="/">Bang Out — 3:05</a> </li>
+                    <li> <a href="/">Bang Out</a> </li>
                     <li> <a href="/">Drop It Like It's Hot (featuring Pharrell)</a> </li>
                   </ol>
                 </CardText>
