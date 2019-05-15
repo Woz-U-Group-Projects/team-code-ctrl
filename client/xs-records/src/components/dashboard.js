@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Card, CardBody, CardTitle, CardText, CardImg, Jumbotron, Col, Button } from 'reactstrap';
+import { Container, Row, Card, CardBody, CardTitle, CardText, CardImg, CardSubtitle, Jumbotron, Col, Button } from 'reactstrap';
 
 
 class Dashboard extends Component {
@@ -22,7 +22,7 @@ class Dashboard extends Component {
               <CardImg src="https://upload.wikimedia.org/wikipedia/en/8/83/SnoopDoggDILIH.jpg" alt="Card image cap"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 1</CardTitle>
-                <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
+                <CardSubtitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardSubtitle>
                 <CardText className="mb-4">
                   <ol>
                     <li> <a href="/">Drop It Like It's Hot (featuring Pharrell)</a> </li>

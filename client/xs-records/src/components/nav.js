@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
 import { Fragment } from 'react';
-import { Nav, Navbar, NavItem, NavLink, NavbarBrand } from 'reactstrap';
+import { Collapse, NavbarToggler, Nav, Navbar, NavItem, NavLink, NavbarBrand } from 'reactstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 class AppNav extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
+
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
 
   render() {
     return (
       <Fragment>
         <Navbar color="faded" light expand="md">
           <NavbarBrand href="/">XS-Records</NavbarBrand>
+          <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" />
+          <Collapse isOpen={ !this.state.collapsed } navbar>
           <Nav className="ml-auto" navbar>
             <LinkContainer to="/dashboard">
               <NavItem>
@@ -27,6 +43,7 @@ class AppNav extends Component {
               </NavItem>
             </LinkContainer>
           </Nav>
+          </Collapse>
         </Navbar>
       </Fragment>
     )
