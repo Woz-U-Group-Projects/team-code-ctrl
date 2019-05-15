@@ -8,7 +8,7 @@ import Home from './components/home';
 
 export default () => 
   <Switch>
-    {/* <Route path="/dashboard" exact component={Dashboard} /> */}
+    <Route path="/dashboard" exact component={Dashboard} />
     <Route path="/login" exact component={Login} />
     <Route path="/register" exact component={Register} />
     <Route path="/" exact component={Home} />
