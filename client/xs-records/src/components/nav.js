@@ -13,7 +13,7 @@ class AppNav extends Component {
           <Nav className="ml-auto" navbar>
             <LinkContainer to="/dashboard">
               <NavItem>
-                <NavLink className="font-weight-bold">Dashboard</NavLink>
+                {/* <NavLink className="font-weight-bold">Dashboard</NavLink> */}
               </NavItem>
             </LinkContainer>
             <LinkContainer to="/login">

@@ -7,7 +7,7 @@ import Login from './components/login-form';
 
 export default () => 
   <Switch>
-    <Route path="/dashboard" exact component={Dashboard} />
+    {/* <Route path="/dashboard" exact component={Dashboard} /> */}
     <Route path="/login" exact component={Login} />
     <Route path="/register" exact component={Register} />
   </Switch>;
