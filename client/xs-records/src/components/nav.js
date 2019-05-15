@@ -11,11 +11,6 @@ class AppNav extends Component {
         <Navbar color="faded" light expand="md">
           <NavbarBrand href="/">XS-Records</NavbarBrand>
           <Nav className="ml-auto" navbar>
-            <LinkContainer to="/dashboard">
-              <NavItem>
-                <NavLink className="font-weight-bold">Dashboard</NavLink>
-              </NavItem>
-            </LinkContainer>
             <LinkContainer to="/login">
               <NavItem>
                 <NavLink className="font-weight-bold">Login</NavLink>

@@ -4,6 +4,9 @@ import Dashboard from './components/dashboard';
 import Register from './components/register';
 import Login from './components/login-form';
 import Home from './components/home';
+import AddAlbum from './components/add-album';
+import AddTrack from './components/add-track';
+
 
 
 export default () => 
@@ -12,5 +15,7 @@ export default () =>
     <Route path="/login" exact component={Login} />
     <Route path="/register" exact component={Register} />
     <Route path="/" exact component={Home} />
+    <Route path="/add-album" exact component={AddAlbum} />
+    <Route path="/add-track" exact component={AddTrack} />
   </Switch>;
 

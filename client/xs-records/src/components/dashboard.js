@@ -7,14 +7,13 @@ class Dashboard extends Component {
   render() {
     return (
       <Container>
-        <Row>
-          <Jumbotron>
-            <h1 className="display-3 font-weight-bold">My Discography</h1>
-            <p>Template for a simple marketing or informational website. It includes a large callout
-              called a jumbotron and three supporting pieces of content. Use it as a starting point
-              to create something more unique.</p>
-            <p><a className="btn btn-primary btn-lg" href="/" role="button">Add A New Release &raquo;</a></p>
+        <Row className="row justify-content-md-center">
+          <Jumbotron >
+            <h1 className="display-4 font-weight-bold">My Discography</h1>
           </Jumbotron>
+        </Row>
+        <Row className="row justify-content-md-center">
+        <p><a className="btn btn-dark btn-lg " href="/add-album" role="button">Add A New Release &raquo;</a></p>
         </Row>
         <Row>
           <Col md={ 4 }>
@@ -31,7 +30,7 @@ class Dashboard extends Component {
                   </ol>
                 </CardText>
                 <Row>
-                  <Button color="primary">More Details</Button>
+                  <Button color="dark">More Details</Button>
                 </Row>
               </CardBody>
             </Card>
@@ -50,7 +49,7 @@ class Dashboard extends Component {
                   </ol>
                 </CardText>
                 <Row>
-                  <Button color="primary">More Details</Button>
+                  <Button color="dark">More Details</Button>
                 </Row>
               </CardBody>
             </Card>
@@ -69,7 +68,7 @@ class Dashboard extends Component {
                   </ol>
                 </CardText>
                 <Row>
-                  <Button color="primary">More Details</Button>
+                  <Button color="dark">More Details</Button>
                 </Row>
               </CardBody>
             </Card>
