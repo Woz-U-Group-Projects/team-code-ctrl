@@ -27,14 +27,6 @@ class AppNav extends Component {
           <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" />
           <Collapse isOpen={ !this.state.collapsed } navbar>
           <Nav className="ml-auto" navbar>
-<<<<<<< HEAD
-=======
-            <LinkContainer to="/dashboard">
-              <NavItem>
-                {/* <NavLink className="font-weight-bold">Dashboard</NavLink> */}
-              </NavItem>
-            </LinkContainer>
->>>>>>> dev
             <LinkContainer to="/login">
               <NavItem>
                 <NavLink className="font-weight-bold">Login</NavLink>
