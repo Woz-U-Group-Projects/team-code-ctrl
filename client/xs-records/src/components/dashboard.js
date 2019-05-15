@@ -64,7 +64,7 @@ class Dashboard extends Component {
                 <CardText className="mb-4">
                   <ol>
                     <li> <a href="/">(Intro) I Love to Give You Light</a> </li>
-                    <li> <a href="/">Bang Out — 3:05</a> </li>
+                    <li> <a href="/">Bang Out</a> </li>
                     <li> <a href="/">Drop It Like It's Hot (featuring Pharrell)</a> </li>
                   </ol>
                 </CardText>
