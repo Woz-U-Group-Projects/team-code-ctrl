@@ -22,9 +22,9 @@ class AppNav extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">XS-Records</NavbarBrand>
-          <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" />
+        <Navbar color="faded"  light expand="md">
+          <NavbarBrand href="/" className="navBrand">XS-Records</NavbarBrand>
+          <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" style={ { backgroundColor: '#d5e6f7'}} />
           <Collapse isOpen={ !this.state.collapsed } navbar>
           <Nav className="ml-auto" navbar>
             <LinkContainer to="/login">

@@ -8,16 +8,16 @@ class Dashboard extends Component {
     return (
       <Container>
         <Row className="row justify-content-md-center">
-          <Jumbotron >
+          <Jumbotron style={ { backgroundColor: '#d5e6f7' } }>
             <h1 className="display-4 font-weight-bold">My Discography</h1>
           </Jumbotron>
         </Row>
         <Row className="row justify-content-md-center">
         <p><a className="btn btn-dark btn-lg " href="/add-album" role="button">Add A New Release &raquo;</a></p>
         </Row>
-        <Row>
+        <Row >
           <Col md={ 4 }>
-            <Card color="default">
+            <Card color="default" style={ { backgroundColor: '#d5e6f7' } }>
               <CardImg src="https://upload.wikimedia.org/wikipedia/en/8/83/SnoopDoggDILIH.jpg" alt="Card image cap"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 1</CardTitle>
@@ -36,7 +36,7 @@ class Dashboard extends Component {
             </Card>
           </Col>
           <Col md={ 4 }>
-            <Card color="default">
+            <Card color="default" style={ { backgroundColor: '#d5e6f7' } }>
               <CardImg src="http://epmgaa.media.clients.ellingtoncms.com/img/photos/2016/06/13/1465825178_6e473d50ca73a0ac5058fbd2edce81f4-2_t580.jpg?8f1b5874916776826eb17d7e67de7278c987ca33" alt="Card image cap"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 2</CardTitle>
@@ -55,7 +55,7 @@ class Dashboard extends Component {
             </Card>
           </Col>
           <Col md={ 4 }>
-            <Card color="default">
+            <Card color="default" style={ { backgroundColor: '#d5e6f7' } }>
               <CardImg src="https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_Gangsta%29_The_Masterpiece_%28Snoop_Dog_album%29_coverart.jpg" alt="Card image cap"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 3</CardTitle>
