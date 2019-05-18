@@ -11,16 +11,30 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.Jumbotron {
-    background-color: #d5e6f7;
-}
-
-Card {
-    background-color: #d5e6f7;
-}
-
-CardText {
+p {
     color: #9A9592;
+    text-shadow: .4px .4px #595655;
+}
+
+.jumbotron {
+    background-color: #d5e6f7;
+    color: '#9A9592'
+}
+
+.jumbotronHomeP {
+    color: #9A9592;
+}
+
+.card {
+    background-color: #d5e6f7;
+}
+
+.cardText {
+    color: #9A9592;
+}
+
+.cardTextDash {
+    text-shadow: .4px .4px
 }
 
 

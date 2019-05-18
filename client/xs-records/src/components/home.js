@@ -19,19 +19,19 @@ class Home extends Component {
             <Container>
               <div >
                 <div>
-            <Jumbotron className='Jumbotron'>
-              <h1 className="display-3 font-weight-bold text-center" >XSR</h1>
-              <p className="text-center font-weight-bold" style={ { color: '#9A9592' } }>XS Records is the easiest way for musicians to get music into Spotify, iTunes, Amazon, Google Play, Tidal, and more.</p>
+            <Jumbotron className="jumbotron">
+              <h1 className="display-3 font-weight-bold text-center jumbotronH1" >XSR</h1>
+              <p className="text-center font-weight-500" jumbotronHomeP>XS Records is the easiest way for musicians to get music into Spotify, iTunes, Amazon, Google Play, Tidal, and more.</p>
                   </Jumbotron>
                 </div>
               </div>
               <div>
                 <Col sm={ { size: 'auto', offset: -2 } } >
-            <Card >
-              <CardBody style={ { backgroundColor: '#d5e6f7' } } >
-                <CardTitle className="display-4 text-center font-weight-bold">XSR News</CardTitle>
+            <Card className='card'>
+              <CardBody className='cardBody'>
+                <CardTitle className="display-4 text-center font-weight-bold cardTitle">XSR News</CardTitle>
 
-                <CardText style={ { color: '#9A9592' } }> <p>Id anim fugiat fugiat proident aute incididunt et irure enim cillum aliqua ullamco. Consectetur nostrud sit est non ex. Quis anim et occaecat culpa pariatur eiusmod.
+                <CardText className='cardText'> <p>Id anim fugiat fugiat proident aute incididunt et irure enim cillum aliqua ullamco. Consectetur nostrud sit est non ex. Quis anim et occaecat culpa pariatur eiusmod.
 <br /><br />
                         Officia dolor enim excepteur mollit in ea aliquip. Nisi reprehenderit amet ad excepteur esse deserunt. Ipsum dolor ad irure aute sit adipisicing ex non consectetur incididunt minim. Officia cillum nulla officia non. Magna cillum ex dolor nisi ad commodo enim et quis. Sit culpa occaecat in et tempor cillum.
 <br /><br />

@@ -8,8 +8,8 @@ class Dashboard extends Component {
     return (
       <Container>
         <Row className="row justify-content-md-center">
-          <Jumbotron style={ { backgroundColor: '#d5e6f7' } }>
-            <h1 className="display-4 font-weight-bold">My Discography</h1>
+          <Jumbotron className='jumbotron'>
+            <h1 className="display-4 font-weight-bold jumbotronH1">My Discography</h1>
           </Jumbotron>
         </Row>
         <Row className="row justify-content-md-center">
@@ -17,12 +17,12 @@ class Dashboard extends Component {
         </Row>
         <Row >
           <Col md={ 4 }>
-            <Card color="default" style={ { backgroundColor: '#d5e6f7' } }>
-              <CardImg src="https://upload.wikimedia.org/wikipedia/en/8/83/SnoopDoggDILIH.jpg" alt="Card image cap"></CardImg>
+            <Card color="default" className='card' >
+              <CardImg src="https://upload.wikimedia.org/wikipedia/en/8/83/SnoopDoggDILIH.jpg" alt="Drop It Like It's Hot Album Cover"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 1</CardTitle>
                 <CardSubtitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardSubtitle>
-                <CardText className="mb-4">
+                <CardText className="mb-4 cardTextDash">
                   <ol>
                     <li> <a href="/">Drop It Like It's Hot (featuring Pharrell)</a> </li>
                     <li> <a href="/">Get 2 Know U (featuring Jelly Roll)</a> </li>
@@ -37,11 +37,11 @@ class Dashboard extends Component {
           </Col>
           <Col md={ 4 }>
             <Card color="default" style={ { backgroundColor: '#d5e6f7' } }>
-              <CardImg src="http://epmgaa.media.clients.ellingtoncms.com/img/photos/2016/06/13/1465825178_6e473d50ca73a0ac5058fbd2edce81f4-2_t580.jpg?8f1b5874916776826eb17d7e67de7278c987ca33" alt="Card image cap"></CardImg>
+              <CardImg src="http://epmgaa.media.clients.ellingtoncms.com/img/photos/2016/06/13/1465825178_6e473d50ca73a0ac5058fbd2edce81f4-2_t580.jpg?8f1b5874916776826eb17d7e67de7278c987ca33" alt="Coolaid Album Cover"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 2</CardTitle>
-                <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
-                <CardText className="mb-4">
+                <CardSubtitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardSubtitle>
+                <CardText className="mb-4 cardTextDash">
                   <ol>
                     <li> <a href="/">Legend</a> </li>
                     <li> <a href="/">Ten Toes Down</a> </li>
@@ -56,11 +56,11 @@ class Dashboard extends Component {
           </Col>
           <Col md={ 4 }>
             <Card color="default" style={ { backgroundColor: '#d5e6f7' } }>
-              <CardImg src="https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_Gangsta%29_The_Masterpiece_%28Snoop_Dog_album%29_coverart.jpg" alt="Card image cap"></CardImg>
+              <CardImg src="https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_Gangsta%29_The_Masterpiece_%28Snoop_Dog_album%29_coverart.jpg" alt="R&G Album Cover"></CardImg>
               <CardBody>
                 <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 3</CardTitle>
-                <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardTitle>
-                <CardText className="mb-4">
+                <CardSubtitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardSubtitle>
+                <CardText className="mb-4 cardTextDash">
                   <ol>
                     <li> <a href="/">(Intro) I Love to Give You Light</a> </li>
                     <li> <a href="/">Bang Out</a> </li>
