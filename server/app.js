@@ -18,6 +18,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
+let albumRouter = require('./routes/albums');
 
 const app = express();
 
@@ -31,5 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/albums', albumRouter);
 
 module.exports = app;

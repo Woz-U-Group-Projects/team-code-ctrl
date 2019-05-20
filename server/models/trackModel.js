@@ -4,7 +4,10 @@ const Album = require './albumModel';
 
 let TrackSchema = new Schema({
   title: {type: String, required: true},
-  album: Album
+  album: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Album'
+  }
 });
 
 module.exports = mongoose.model('Album', AlbumSchema);

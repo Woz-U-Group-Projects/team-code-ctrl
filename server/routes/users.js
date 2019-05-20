@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 
 router.post('/login', function(req, res, next) {
 
+  //bres stands for bcrypt response
   User.findOne({username: req.body.username}, function(err, user) {
     bcrypt.compare(req.body.password, user.password, function(err, bres) {
       if(bres){
