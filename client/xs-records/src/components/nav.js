@@ -24,7 +24,7 @@ class AppNav extends Component {
       <Fragment>
         <Navbar color="faded"  light expand="md">
           <NavbarBrand href="/" className="navBrand">XS-Records</NavbarBrand>
-          <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" style={ { backgroundColor: '#d5e6f7'}} />
+          <NavbarToggler onClick={ this.toggleNavbar } className="mr-2 navBar" />
           <Collapse isOpen={ !this.state.collapsed } navbar>
           <Nav className="ml-auto" navbar>
             <LinkContainer to="/login">

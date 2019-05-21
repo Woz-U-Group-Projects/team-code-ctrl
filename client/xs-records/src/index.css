@@ -12,8 +12,12 @@ code {
 }
 
 p {
-    color: #9A9592;
-    text-shadow: .36px .36px #595655;
+    color: #333333;
+    text-shadow: 1px 1px 3px #4e4e4e;
+}
+
+ol {
+    text-shadow: none;
 }
 
 .jumbotron {
@@ -25,7 +29,11 @@ p {
     color: #9A9592;
 }
 
-.card {
+.cardHome {
+    background-color: #d5e6f7;
+}
+
+.cardDash {
     background-color: #d5e6f7;
 }
 
@@ -33,32 +41,26 @@ p {
     color: #9A9592;
 }
 
-.cardTextDash {
-    text-shadow: .4px .4px
+.navBar {
+    background-color: #d5e6f7;
 }
 
-
-/* Color Theme Swatches in Hex */
-
-
-/* Color Theme Swatches in Hex */
-
-.My-Color-Theme-1-hex {
-    color: #B33117;
+#username {
+    background-color: #d5e6f7;
 }
 
-.My-Color-Theme-2-hex {
-    color: #FF7154;
+#password {
+    background-color: #d5e6f7;
 }
 
-.My-Color-Theme-3-hex {
-    color: #FF5C3B;
+#fName {
+    background-color: #d5e6f7;
 }
 
-.My-Color-Theme-4-hex {
-    color: #05B36E;
+#lName {
+    background-color: #d5e6f7;
 }
 
-.My-Color-Theme-5-hex {
-    color: #3BFFB2;
+#email {
+    background-color: #d5e6f7;
 }
