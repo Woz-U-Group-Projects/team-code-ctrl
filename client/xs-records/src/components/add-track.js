@@ -42,11 +42,11 @@ class AddTrack extends Component {
           <Col md={{size: 6, offset: 3}}>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
-                <Label for="title">Song Title</Label>
+                <Label for="title"></Label>
                 <Input onChange={this.onChange} type="text" name="title" id="title" placeholder="Song Title" />
               </FormGroup>
               <FormGroup>
-                <Label for="audio">Upload Audio </Label>
+                <Label for="audio" id="audio">Upload Audio </Label>
                 <Input onChange={this.onChange} type="file" />
               </FormGroup>
               <Button>Submit</Button>

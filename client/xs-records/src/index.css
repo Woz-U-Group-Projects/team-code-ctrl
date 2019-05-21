@@ -64,3 +64,23 @@ ol {
 #email {
     background-color: #d5e6f7;
 }
+
+#albumName {
+    background-color: #d5e6f7;
+}
+
+#artist {
+    background-color: #d5e6f7;
+}
+
+#numberOfTracks {
+    background-color: #d5e6f7;
+}
+
+#title {
+    background-color: #d5e6f7;
+}
+
+#audio {
+    font-weight: bold;
+}

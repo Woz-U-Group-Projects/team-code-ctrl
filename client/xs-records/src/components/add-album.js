@@ -57,7 +57,7 @@ class AddAlbum extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="cover">Upload Cover </Label>
-                <Input onChange={this.onChange} type="file" />
+                <Input onChange={this.onChange} type="file" id="cover" />
               </FormGroup>
               <Button  href="/add-track">Continue to Tracks</Button>
             </Form>
