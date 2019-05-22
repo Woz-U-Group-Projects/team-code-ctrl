@@ -13,7 +13,7 @@ code {
 
 p {
     color: #333333;
-    text-shadow: 1px 1px 3px #4e4e4e;
+    text-shadow: 1px 1px 2px #4e4e4e;
 }
 
 ol {
@@ -25,60 +25,23 @@ ol {
     color: '#9A9592'
 }
 
-.jumbotronHomeP {
-    color: #9A9592;
-}
-
-.cardHome {
-    background-color: #d5e6f7;
-}
-
-.cardDash {
+.cardHome,
+.cardDash,
+.navBar,
+#username,
+#password,
+#fName,
+#lName,
+#email,
+#albumName,
+#artist,
+#numberOfTracks,
+#title {
     background-color: #d5e6f7;
 }
 
 .cardText {
     color: #9A9592;
-}
-
-.navBar {
-    background-color: #d5e6f7;
-}
-
-#username {
-    background-color: #d5e6f7;
-}
-
-#password {
-    background-color: #d5e6f7;
-}
-
-#fName {
-    background-color: #d5e6f7;
-}
-
-#lName {
-    background-color: #d5e6f7;
-}
-
-#email {
-    background-color: #d5e6f7;
-}
-
-#albumName {
-    background-color: #d5e6f7;
-}
-
-#artist {
-    background-color: #d5e6f7;
-}
-
-#numberOfTracks {
-    background-color: #d5e6f7;
-}
-
-#title {
-    background-color: #d5e6f7;
 }
 
 #audio {
