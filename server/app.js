@@ -5,12 +5,13 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+
 let db_url = 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records';
 
 const mongoDb = process.env.MONGODB_URI || db_url;
 
 mongoose.connect(mongoDb, {useNewUrlParser: true});
-mongoose.Promise = global.Promise;
+mongoose.Promise = require('bluebird');
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
