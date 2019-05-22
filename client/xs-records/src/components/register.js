@@ -39,29 +39,29 @@ class Register extends Component {
   render() {
     return (
       <Container fluid>
-        <h2 className="text-center"> Register </h2>
+        <h2 className="text-center"> register </h2>
         <hr />
         <Row>
           <Col md={{size: 6, offset: 3}}>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
-                <Label for="fname">First Name</Label>
-                <Input onChange={this.onChange} type="text" name="fname" id="fname" placeholder="First Name" />
+                <Label for="fname"></Label>
+                <Input onChange={this.onChange} type="text" name="fname" id="fName" placeholder="First Name" />
               </FormGroup>
               <FormGroup>
-                <Label for="lname">Last Name</Label>
-                <Input onChange={this.onChange} type="text" name="lname" id="lname" placeholder="Last Name" />
+                <Label for="lname"></Label>
+                <Input onChange={this.onChange} type="text" name="lname" id="lName" placeholder="Last Name" />
               </FormGroup>
               <FormGroup>
-                <Label for="email">Email</Label>
+                <Label for="email"></Label>
                 <Input onChange={this.onChange} type="email" name="email" id="email" placeholder="Email" />
               </FormGroup>
               <FormGroup>
-                <Label for="username">Username</Label>
-                <Input onChange={this.onChange} type="text" name="username" id="usename" placeholder="User Name" />
+                <Label for="username"></Label>
+                <Input onChange={this.onChange} type="text" name="username" id="username" placeholder="User Name" />
               </FormGroup>
               <FormGroup>
-                <Label for="password">Password</Label>
+                <Label for="password"></Label>
                 <Input onChange={this.onChange} type="password" name="password" id="password" placeholder="Password" />
               </FormGroup>
               <Button>Submit</Button>

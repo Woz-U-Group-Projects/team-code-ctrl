@@ -49,16 +49,17 @@ class LoginForm extends Component {
     return (
       <Container>
         {this.renderRedirect()}
+        {/* I kind of like the lowercase "login". Should we keep it? */}
         <h2 className="text-center">login</h2>
         <Row>
           <Col md={{size: 6, offset: 3}}>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
-                <Label for="username">Username</Label>
+                <Label for="username"></Label>
                 <Input onChange={this.onChange} type="text" name="username" id="username" placeholder="Username" />
               </FormGroup>
               <FormGroup>
-                <Label for="password">Password</Label>
+                <Label for="password"></Label>
                 <Input onChange={this.onChange} type="password" name="password" id="password" placeholder="Password" />
               </FormGroup>
               <Button type="submit" value="submit">Submit</Button>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Card, CardBody, CardTitle, CardText, CardImg, Jumbotron, Col, Button } from 'reactstrap';
+import { Container,  Card, CardBody, CardTitle, CardText,  Jumbotron, Col } from 'reactstrap';
 
 
 
@@ -7,15 +7,7 @@ class Home extends Component {
 
   render() {
     return (
-//       <Container>
-//         <div>
-//           <h1 className="display-3 font-weight-bold text-center">XSR</h1>
-//           <div >
-//             <p className="text-center" >XS Records is the easiest way for musicians to get music into Spotify, iTunes, Amazon, Google Play, Tidal, and more.
-// Upload as much as you want, keep 100% of your royalties.</p>
-//           </div>
-//         </div>
-//       </Container>
+
             <Container>
               <div >
                 <div>
@@ -26,8 +18,8 @@ class Home extends Component {
                 </div>
               </div>
               <div>
-                <Col sm={ { size: 'auto', offset: -2 } } >
-            <Card className='card'>
+          <Col sm={ { size: 'auto', offset: -2 } } >
+            <Card className='cardHome'>
               <CardBody className='cardBody'>
                 <CardTitle className="display-4 text-center font-weight-bold cardTitle">XSR News</CardTitle>
 
