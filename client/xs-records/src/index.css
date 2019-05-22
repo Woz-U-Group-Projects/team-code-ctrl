@@ -12,19 +12,16 @@ code {
 }
 
 p {
-<<<<<<< HEAD
     color: #333;
     text-shadow: .36px .36px 1px #e4e4e4;
     color: #9A9592;
     text-shadow: .36px .36px #595655;
-=======
     color: #333333;
     text-shadow: 1px 1px 2px #4e4e4e;
 }
 
 ol {
     text-shadow: none;
->>>>>>> 8755880b6e1240e79eebbf29b747860b3982a9c3
 }
 
 .jumbotron {
@@ -51,8 +48,6 @@ ol {
     color: #9A9592;
 }
 
-<<<<<<< HEAD
-=======
 .navBar {
     background-color: #d5e6f7;
 }
@@ -93,13 +88,9 @@ ol {
     background-color: #d5e6f7;
 }
 
-<<<<<<< HEAD
 .My-Color-Theme-5-hex {
     color: #3BFFB2;
 }
-=======
->>>>>>> dev
 #audio {
     font-weight: bold;
 }
->>>>>>> 8755880b6e1240e79eebbf29b747860b3982a9c3
