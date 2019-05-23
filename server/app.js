@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const session = require('express-session');
+const passport = require('passport');
 
 
 let db_url = 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records';
@@ -30,6 +32,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({secret: 'gracie', cookie: {maxAge: 6000}, resave: false, saveUninitialized: false }));
+app.use(passport.initialize());
+require('./config/passport');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

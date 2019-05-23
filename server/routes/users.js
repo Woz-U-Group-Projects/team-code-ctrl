@@ -2,65 +2,71 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const withAuth = require('../middleware');
+const secret = 'gracie';
+
 
 router.post('/login', function(req, res, next) {
 
-  //bres stands for bcrypt response
-  User.findOne({username: req.body.username}, function(err, user) {
-    bcrypt.compare(req.body.password, user.password, function(err, bres) {
-      if(bres){
-        res.send({redirect: bres});
-      } else {
-        res.send({redirect: bres});
-      }
-    });
+  const { username, password } = req.body;
+
+  User.findOne({username}, function(err, user) {
+    if( err ) {
+      console.error(err);
+      res.status(500)
+      .json({
+        error: 'Internal monkey business, please try again'
+      });
+    } else if (!user) {
+      res.status(401)
+        .json({
+          error: 'Incorrect username or password'
+        });
+    } else {
+      user.isCorrectPassword(password, function(err, same) {
+        if(err) {
+          res.status(500)
+            .json({
+              error: 'Internal monkey business, try again'
+            });
+        } else if (!same) {
+          res.status(401)
+          .json({ error: 'Incorrect username or password'});
+        } else {
+          //Issue token
+          const payload = { username };
+          const token = jwt.sign(payload,secret, {
+            expiresIn: '1h'
+          });
+          res.cookie('token', token, { httpOnly: true })
+          .sendStatus(200);
+        }
+      });
+    }
   });
-
-});
-
-/* GET route that retrieves a list of users */
-router.get('/:id', function(req, res, next) {
-    User.findById(req.params.id, function(err, user) {
-        if (err) return next(err);
-        res.json(user);
-    });
 });
 
 
 router.post('/register', function(req, res, next){
 
-  let password = bcrypt.hashSync(req.body.password, 10);
+  const { fname, lname, email, username, password } = req.body;
 
-  let user = new User(
-    {
-      fname: req.body.fname,
-      lname: req.body.lname,
-      email: req.body.email,
-      username: req.body.username,
-      password: password
-    }
-  )
+  const user = new User({ fname, lname, email, username, password });
 
   user.save(function(err) {
     if(err) {
-      return next(err);
+      res.status(500)
+      .send("Error registering new user. Please try again.");
+    } else {
+      res.status(200).send("New user registered");
     }
-    res.send('User Registered Successfully');
-  })
-
+  });
 });
 
-router.post('/register', function(req, res, next) {
-    let user = new User({
-        email: req.body.email,
-        username: req.body.username
-    });
-    user.save(function(err) {
-        if (err) {
-            return next(err);
-        }
-        res.send('User Registered Successfully');
-    })
+router.get('/dashboard', withAuth, function(req, res, next) {
+  res.send('The dashboard');
 });
+
 
 module.exports = router;
