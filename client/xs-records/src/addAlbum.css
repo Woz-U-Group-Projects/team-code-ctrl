@@ -1,0 +1,10 @@
+#albumName,
+#artist,
+#numberOfTracks,
+#title {
+    background-color: #b0bbec;
+}
+
+#uploadCoverLabel {
+    font-weight: bold;
+}

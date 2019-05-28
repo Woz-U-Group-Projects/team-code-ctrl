@@ -4,8 +4,8 @@ import Dashboard from './components/dashboard';
 import Register from './components/register';
 import Login from './components/login-form';
 import Home from './components/home';
-import AddAlbum from './components/add-album';
-import AddTrack from './components/add-track';
+import AddAlbum from './components/addAlbum';
+import AddTrack from './components/addTrack';
 
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import '../addTrack.css'
 class AddTrack extends Component {
 
   constructor(props) {
@@ -46,7 +46,7 @@ class AddTrack extends Component {
                 <Input onChange={this.onChange} type="text" name="title" id="title" placeholder="Song Title" />
               </FormGroup>
               <FormGroup>
-                <Label for="audio" id="audio">Upload Audio </Label>
+                <Label for="audio" id="uploadAudioBtn">Upload Audio </Label>
                 <Input onChange={this.onChange} type="file" />
               </FormGroup>
               <Button>Submit</Button>

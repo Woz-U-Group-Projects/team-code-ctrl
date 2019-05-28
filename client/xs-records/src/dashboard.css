@@ -1,0 +1,24 @@
+.flexCenterDash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.btnRow {
+    display: flex;
+}
+
+.btnNewRelease {
+    align-items: flex-end;
+}
+
+.myDiscography {
+    color: #271b1b;
+    text-shadow: #4e4e4e 1px 1px 1px;
+    min-width: 100%;
+    min-height: 12em;
+    position: relative;
+}
