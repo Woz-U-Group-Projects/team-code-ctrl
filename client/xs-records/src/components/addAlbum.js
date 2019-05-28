@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import '../addAlbum.css'
 class AddAlbum extends Component {
 
   constructor(props) {
@@ -44,20 +44,20 @@ class AddAlbum extends Component {
           <Col md={{size: 6, offset: 3}}>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
-                <Label for="albumName">Album Name</Label>
+                <Label for="albumName"></Label>
                 <Input onChange={this.onChange} type="text" name="albumName" id="albumName" placeholder="Album Name" />
               </FormGroup>
               <FormGroup>
-                <Label for="artist">Atrist</Label>
+                <Label for="artist"></Label>
                 <Input onChange={this.onChange} type="text" name="artist" id="artist" placeholder="Artist" />
               </FormGroup>
               <FormGroup>
-                <Label for="numberOfTracks">Number of tracks</Label>
-                <Input onChange={this.onChange} type="number" name="numberOfTracks" id="numberOfTracks" placeholder="12" />
+                <Label for="numberOfTracks"></Label>
+                <Input onChange={ this.onChange } type="number" name="numberOfTracks" id="numberOfTracks" placeholder="Number of Tracks — e.g. 12" />
               </FormGroup>
               <FormGroup>
-                <Label for="cover">Upload Cover </Label>
-                <Input onChange={this.onChange} type="file" id="cover" />
+                <Label for="cover" id='uploadCoverLabel'>Upload Cover</Label>
+                <Input onChange={this.onChange} type="file" id="coverBtn" />
               </FormGroup>
               <Button  href="/add-track">Continue to Tracks</Button>
             </Form>

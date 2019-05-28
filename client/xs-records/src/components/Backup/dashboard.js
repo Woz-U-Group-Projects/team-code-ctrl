@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import { Container, Row, Card, CardBody, CardTitle, CardText, CardImg, CardSubtitle, Col, Button } from 'reactstrap';
+import { Container, Row, Card, CardBody, CardTitle, CardText, CardImg, CardSubtitle, Jumbotron, Col, Button } from 'reactstrap';
 
 
 class Dashboard extends Component {
 
   render() {
     return (
-      <Container className='flexCenterDash'>
+      <Container>
         <Row className="row justify-content-md-center">
-          <div className='myDiscography'>
+          <Jumbotron className='jumbotron'>
             <h1 className="display-4 font-weight-bold jumbotronH1">My Discography</h1>
-          </div>
+          </Jumbotron>
         </Row>
-        <Row className="row justify-content-md-center btnRow">
-        <a className="btn btn-dark btn-lg btnNewRelease" href="/add-album" role="button">Add A New Release &raquo;</a>
+        <Row className="row justify-content-md-center">
+        <a className="btn btn-dark btn-lg " href="/add-album" role="button">Add A New Release &raquo;</a>
         </Row>
-        <br/><br/>
         <Row >
           <Col md={ 4 }>
             <Card color="default" className='cardDash' >
@@ -39,8 +38,8 @@ class Dashboard extends Component {
             <Card color="default" className='cardDash'>
               <CardImg src="http://epmgaa.media.clients.ellingtoncms.com/img/photos/2016/06/13/1465825178_6e473d50ca73a0ac5058fbd2edce81f4-2_t580.jpg?8f1b5874916776826eb17d7e67de7278c987ca33" alt="Coolaid Album Cover"></CardImg>
               <CardBody>
-                <CardTitle className="h3 mb-2 pt-2 font-weight-bold">Album 2</CardTitle>
-                <CardSubtitle className="h4 mb-2 pt-2 font-weight-bold">Artist</CardSubtitle>
+                <CardTitle className="h2 mb-2 pt-2 font-weight-bold">Album 2</CardTitle>
+                <CardSubtitle className="h3 mb-2 pt-2 font-weight-bold">Artist</CardSubtitle>
                 <CardText className="mb-4 cardTextDash">
                   <ol>
                     <li> <a href="/">Legend</a> </li>
