@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 let db_url = 'mongodb://wozu:1tester@ds151416.mlab.com:51416/xs-records';
 
@@ -18,6 +19,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
+let albumRouter = require('./routes/albums');
 
 const app = express();
 
@@ -29,6 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors());
+app.use('/albums', albumRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
