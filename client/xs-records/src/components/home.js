@@ -3,12 +3,10 @@ import { Container } from 'reactstrap';
 import '../home.css';
 
 
-
 class Home extends Component {
 
   render() {
     return (
-
       <Container className='flexCenter'>
               <div className='hero '>
                 <div className='xsrDescription'>
@@ -17,7 +15,6 @@ class Home extends Component {
                 </div>
               </div>
               <div>
-          {/* <Col sm={ { size: 'auto', offset: -2 } } > */}
             <div className='news'>
               <div className='newsBody'>
                 <div className="display-4 text-center font-weight-bold newsTitle">XSR News</div>
@@ -31,7 +28,6 @@ class Home extends Component {
 
                     </div>
                   </div>
-                {/* </Col> */}
               </div>
 
             </Container>

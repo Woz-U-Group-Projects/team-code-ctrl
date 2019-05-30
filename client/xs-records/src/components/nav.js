@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes} from 'react';
 import { Fragment } from 'react';
 import { Collapse, NavbarToggler, Nav, Navbar, NavItem, NavLink, NavbarBrand } from 'reactstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+
 
 class AppNav extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class AppNav extends Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
     };
   }
 
@@ -22,11 +23,11 @@ class AppNav extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar color="faded"  light expand="md">
-          <NavbarBrand href="/" className="navBrand">XS-Records</NavbarBrand>
+        <Navbar color="faded" light expand="md" sticky="top">
+          <NavbarBrand href="/" className="navBrand" >XS-Records</NavbarBrand>
           <NavbarToggler onClick={ this.toggleNavbar } className="mr-2 navBar" />
           <Collapse isOpen={ !this.state.collapsed } navbar>
-          <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto navbar-fixed-top" fixed navbar>
             <LinkContainer to="/login">
               <NavItem>
                 <NavLink className="font-weight-bold">Login</NavLink>
