@@ -42,8 +42,9 @@ export const fetchAlbum = (id) => async dispatch => {
 }
 
 export const editAlbum = (id, formValues) => async dispatch => {
-  const response = await albums.put(`/albums/${id}`, formValues);
+  const response = await albums.patch(`/albums/edit/${id}`, formValues);
   dispatch({type: EDIT_ALBUM, payload: response.data});
+  history.push('/');
 }
 
 export const deleteAlbum = (id) => async dispatch => {

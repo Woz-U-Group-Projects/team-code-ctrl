@@ -20,7 +20,7 @@ const App = () => {
           <Header />
           <Route path="/" exact component={AlbumList} />
           <Route path="/albums/new" exact component={AlbumCreate} />
-          <Route path="/albums/edit" exact component={AlbumEdit} />
+          <Route path="/albums/:id" exact component={AlbumEdit} />
           <Route path="/albums/delete" exact component={AlbumDelete} />
           <Route path="/albums/show" exact component={AlbumShow} />
         </div>

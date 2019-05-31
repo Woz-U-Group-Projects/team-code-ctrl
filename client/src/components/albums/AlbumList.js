@@ -13,9 +13,9 @@ class AlbumList extends React.Component {
     if (album.userId === this.props.currentUserId) {
       return (
         <div className="right floated content">
-          <button className="ui button primary">
+            <Link to={`/albums/${album._id}`} className="ui button primary">
             Edit
-          </button>
+          </Link>
           <button className="ui button negative">
             Delete
           </button>
@@ -27,7 +27,7 @@ class AlbumList extends React.Component {
   renderList() {
     return this.props.albums.map(album => {
       return (
-        <div className="item" key={album.albumName}>
+        <div className="item" key={album._id}>
           {this.renderAdminButtons(album)}
           <i className="large middle aligned icon music" />
           <div className="content">
