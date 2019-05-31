@@ -26,8 +26,17 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.put('/:id', function(req, res, next) {
-  res.send('Edit an album');
+router.patch('/edit/:id', function(req, res, next) {
+  Album.findOne({_id: req.params.id}).then(function( album) {
+    album.albumName = req.body.albumName;
+    album.numberOfTracks = req.body.numberOfTracks;
+    album.save(function(err) {
+      if(err) {
+        return next(err).status(500).json('No good');
+      }
+      res.status(201).json({message: 'Album updated'});
+    });
+  });
 });
 
 router.get('/:id', function(req, res, next) {
