@@ -25,6 +25,13 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+
+
+
+    
+
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,10 +47,9 @@
         <div class="searchBoxWrap">
             <div class="findYourMusicBlock">Find your music</div>
             <div class="hpSearch">
-            <form id="hpSearch" class="searchBox searchBox_on" name="navSearch" action="/search2/default.cfm" method="post"> 
-                
-                <input type="text" id="searchTerm" name="searchTerm" size="12" class="hpSearchInput searchBox_on">
-                <input type="button" id="hpSearchSubmit" name="hpSearchSubmit" value="" onmousedown="this.form.submit();">
+              <form id="bigSearch" name="bigSearch" class="search search_off" action="/search2/default.cfm" method="post"> 
+                <input id="SearchTerm" type="text" name="SearchTerm" onblur="document.getElementById('bigSearch').className='search search_off';" onfocus="document.getElementById('bigSearch').className='search search_on';" value="">
+                <input type="submit" id="submitBtn" name="submit" value="submit">
             </form>
             </div>
             <div class="searchBG"></div>
@@ -54,7 +60,7 @@
 
     <main role="main" class="container"></main>
 
-    <footer class="footer">
+    <footer class="footer" ali>
         <div class="container">
             <p class="emailMe">Message Me!
                 <span class="social social-e-mail-envelope"></span>
