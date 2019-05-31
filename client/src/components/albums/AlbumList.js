@@ -16,25 +16,30 @@ class AlbumList extends React.Component {
             <Link to={`/albums/${album._id}`} className="ui button primary">
             Edit
           </Link>
-          <button className="ui button negative">
+            <Link to={`/albums/delete/${album._id}`} className="ui button negative">
             Delete
-          </button>
+          </Link>
         </div>
       );
     }
   }
 
   renderList() {
+
     return this.props.albums.map(album => {
-      return (
-        <div className="item" key={album._id}>
-          {this.renderAdminButtons(album)}
-          <i className="large middle aligned icon music" />
-          <div className="content">
-            {album.albumName}
+      if(album.albumName) {
+        return (
+          <div className="item" key={album._id}>
+            {this.renderAdminButtons(album)}
+            <i className="large middle aligned icon music" />
+            <div className="content">
+              <p className="header">Album Name: {album.albumName}</p>
+              <p className="description">Number of tracks: {album.numberOfTracks}</p>
+            </div>
           </div>
-        </div>
-      );
+        );
+      }
+      return null;
     });
   }
 

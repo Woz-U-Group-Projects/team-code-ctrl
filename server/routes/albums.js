@@ -6,7 +6,7 @@ router.post('/', function(req, res, next) {
   let album = new Album (
     {
       albumName: req.body.albumName,
-      numberOfTracks: req.body.tracks,
+      numberOfTracks: req.body.numberOfTracks,
       userId: req.body.userId
     }
   )
@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.patch('/edit/:id', function(req, res, next) {
-  Album.findOne({_id: req.params.id}).then(function( album) {
+  Album.findOne({_id: req.params.id}).then(function(album) {
     album.albumName = req.body.albumName;
     album.numberOfTracks = req.body.numberOfTracks;
     album.save(function(err) {
@@ -40,11 +40,17 @@ router.patch('/edit/:id', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) {
-  res.send('Get an album');
+  Album.findOne({_id: req.params.id}, function(err,album) {
+    if(err) return (err);
+    res.status(200).send(album);
+  });
 });
 
 router.delete('/:id', function(req, res, next) {
-  res.send('Delete an album');
+  Album.deleteOne({_id: req.params.id}, function(err, album) {
+    if(err) return (err);
+    res.status(200);
+  });
 });
 
 module.exports = router;

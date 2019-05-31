@@ -50,4 +50,5 @@ export const editAlbum = (id, formValues) => async dispatch => {
 export const deleteAlbum = (id) => async dispatch => {
   await albums.delete(`/albums/${id}`);
   dispatch({type: DELETE_ALBUM, payload: id});
+  history.push('/');
 }
