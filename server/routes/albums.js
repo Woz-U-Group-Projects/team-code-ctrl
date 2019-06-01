@@ -49,7 +49,7 @@ router.get('/:id', function(req, res, next) {
 router.delete('/:id', function(req, res, next) {
   Album.deleteOne({_id: req.params.id}, function(err, album) {
     if(err) return (err);
-    res.status(200);
+    res.send(album);
   });
 });
 
