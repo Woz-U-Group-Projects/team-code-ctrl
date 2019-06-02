@@ -5,7 +5,6 @@ class AddTrack extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       title: '',
       audio:'',
