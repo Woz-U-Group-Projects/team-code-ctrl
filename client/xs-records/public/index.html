@@ -25,6 +25,13 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+
+
+
+    
+
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -34,8 +41,41 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    --><div id="hpSearchbox" class="hpCategoryWrapper">
+    	<div class="hpCategory">
+            
+        <div class="searchBoxWrap">
+            <div class="findYourMusicBlock">Find your music</div>
+            <div class="hpSearch">
+              <form id="bigSearch" name="bigSearch" class="search search_off" action="/search2/default.cfm" method="post"> 
+                <input id="SearchTerm" type="text" name="SearchTerm" onblur="document.getElementById('bigSearch').className='search search_off';" onfocus="document.getElementById('bigSearch').className='search search_on';" value="">
+                <input type="submit" id="submitBtn" name="submit" value="submit">
+            </form>
+            </div>
+            <div class="searchBG"></div>
+        </div>
+    </div>
+    </div>
+
+
+    <main role="main" class="container"></main>
+
+    <footer class="footer" ali>
+        <div class="container">
+            <p class="emailMe">Message Me!
+                <span class="social social-e-mail-envelope"></span>
+                <a href="mailto:michael.byrd@my.scitexas.edu">michael.byrd@my.scitexas.edu </a>
+            </p>
+        </div>
+    </footer>
+
+
+
   <script   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="   crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+
   </body>
 </html>
