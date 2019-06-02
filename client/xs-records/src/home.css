@@ -1,0 +1,244 @@
+.flexCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.xsrDescription {
+    color: #010102;
+    text-shadow: #4e4e4e 1px 1px 1px;
+    min-width: 100%;
+    min-height: 12em;
+    position: relative;
+}
+
+.news {
+    color: #271b1b;
+    text-shadow: #4e4e4e 1px 1px 1px;
+    min-width: 100%;
+    min-height: 12em;
+    position: relative;
+    text-align: center;
+}
+
+.xsrDescription::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    min-width: 100%;
+    min-height: 12em;
+    z-index: -1;
+    opacity: 0.4;
+    background-color: #3610c2;
+}
+
+.news::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    min-width: 100%;
+    min-height: 26em;
+    z-index: -1;
+    opacity: 0.3;
+    background-color: #300c86;
+}
+
+.navbar {
+    background: rgb(40, 30, 180);
+}
+
+.nav-link,
+.navbar-brand {
+    color: #070000;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    background: #f1f1f1;
+    color: #381cda;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+    background: rgb(18, 91, 187) !important;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+
+body {
+    background: #fff
+}
+
+#homepage #header #bgPic {
+    background-color: #f2f2f2
+}
+
+#homepage #header #bgPic_overlay {
+    background: rgba(255, 255, 255, 0.3)
+}
+
+#homepage #header #scBranding #soundclick {
+    color: #000;
+    opacity: 0.7
+}
+
+#homepage #header #scBranding #scTagline {
+    color: #000;
+    opacity: 0.7
+}
+
+.scrollWrapper {
+    background: #fff
+}
+
+.scrollWrapper .scrollButtons {
+    background: rgba(255, 255, 255, 0.85)
+}
+
+.scrollWrapper:hover .scrollButtons {
+    opacity: 1
+}
+
+.scrollWrapper .scrollButtons i.fa {
+    color: #444
+}
+
+.scrollItem {
+    border-top: solid 2px #fff
+}
+
+.scrollItem .listedTitle {
+    color: #888
+}
+
+.scrollItem:hover {
+    border-top: solid 2px #444
+}
+
+.scrollItem:hover .listedTitle {
+    color: #444
+}
+
+#charts {
+    background: #fff
+}
+
+#hpSearchbox {
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%)
+}
+
+#store {
+    background: #262626
+}
+
+.saBox .saAlbumTitle {
+    color: #888
+}
+
+#homepageFooter {
+    background: #262626
+}
+/* categories */
+#homepage .hpCategoryWrapper {display:flex; position:relative; width:100%; margin:0; padding:0;}
+#homepage .hpCategory {position:relative; width:1120px; margin:auto;}
+
+/*header */
+#homepage #header {width:100%; height:360px; position:relative; }
+#homepage #header #bgPic {z-index:0; position:absolute; top:0; left:0; right:0; bottom:0; background-image: url('/images/stock/cuts/97.jpg'); background-size: cover; background-position:center center; background-repeat:no-repeat;}
+#homepage #header #bgPic_overlay {z-index:1; position:absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.4);}
+#homepage #header #scBranding {z-index:2; position:absolute; width:800px; height:100px; margin:0 auto; top:130px; left:0; right:0; } 
+#homepage #header #scBranding #soundclick {position:absolute; top:0; left:0; font-size:52px; color:#fff; opacity:0.9; }
+#homepage #header #scBranding #scTagline {position:absolute; top:70px; left:250px; font-size:20px; color:#fff; opacity:0.7;}
+
+/* scroller */
+.scrollWrapper {position:relative; height:220px; width:100%; overflow:hidden; background:#141414;}
+	.scrollWrapper .scrollButtons {opacity:0; height:240px; width:50px; background:rgba(20,20,20,.85); z-index:2; position:absolute; }
+		.scrollWrapper:hover .scrollButtons {opacity:1; transition:all .2s ease-in-out;}
+	.scrollWrapper .scrollButtons i.fa {font-size:75px; color:#eee; position:absolute; top:55px; left:11.6px;}
+	.scrollWrapper .scrollBtnLeft {left:-50px; top:0; transition:all .4s ease-out;}
+	.scrollWrapper .scrollBtnRight {right:0; top:0; opacity:1;}
+	.scrollWrapper .scrollBufferLeft {display:inline; margin-left:-48px; margin-right:45px; transition:all .4s ease-out;}
+	.scrollWrapper .scrollBufferRight {display:inline; margin-left:150px;}
+.scrollList {position:relative; height:250px; white-space:nowrap; overflow:auto;}
+.scrollItem {display:inline-block; width:200px; height:220px; margin:0 2px; border-top:solid 2px #141414; transition:all 0.2s ease-out; cursor:pointer;}
+.scrollItem .listedCover {width:180px; height:180px; margin:10px auto 5px auto; background-position: center center; background-size:cover; background-repeat: no-repeat; overflow:hidden;}
+.scrollItem .listedTitle {text-align:center; color:#bbb; font-size:14px; font-weight:bold; padding:5px 0 2px 0; width:140px; margin:auto; white-space:nowrap; overflow:hidden; transition:all .2s ease-in-out;}
+.scrollItem:hover {border-top:solid 2px #eee;}
+	.scrollItem:hover .listedTitle {color:#eee;}	
+/* to ensure smooth momnentum scrolling on ios (was jittery before) */
+.scrollList {-webkit-overflow-scrolling: touch;}
+
+/* charts */
+#charts {height:320px; background:#141414;}
+#charts .hpCategory {width:95%;}
+
+/* searchbox */
+#hpSearchbox {height:180px; padding:30px 0; background:#262626; background:linear-gradient(to bottom, #141414 0%,#282828 100%);}
+#hpSearchbox .hpCategory {padding-bottom:30px;}
+#hpSearchbox .hpSearch {float:left; position:relative; z-index:1;}
+#hpSearchbox .hpSearch .searchBox {height:45px; width:360px; padding:10px 0 0 15px; border-radius:0 5px 5px 0; position:relative;}
+	#hpSearchbox .hpSearch .searchBox_off {background:#f3f3f3; color:#888; font-size:24px; opacity:0.8;}
+	#hpSearchbox .hpSearch .searchBox_off #hpSearchSubmit  {background: url(/images/siteNav/searchGlass.png) no-repeat center; background-size: 20px auto;}
+	#hpSearchbox .hpSearch .searchBox_on {background:#fff; color:#333; font-size:24px; opacity:1;}
+	#hpSearchbox .hpSearch .searchBox_on #hpSearchSubmit  {background: url(/images/siteNav/searchGlass_dark.png) no-repeat center; background-size: 20px auto;}
+#hpSearchbox .hpSearch .searchBox input[type="text"] {border:none; background:none; width:335px;}
+#hpSearchbox .hpSearch .searchBox #hpSearchSubmit {cursor:pointer; width:22px; height: 22px; margin:0; padding:16px; border: none; position:absolute; right:0;}
+#hpSearchbox .hpSearch .searchBox input:focus {outline:none;}
+#hpSearchbox .hpSearch .searchBox .typewrite {position:absolute; left:15px; top:10px; color:#888; font-size:24px; display:block;}
+#hpSearchbox .hpSearch .searchBox .typewrite_off {display:none;}
+#hpSearchbox .searchBoxWrap {position:relative; width:100%; background-color:#999; border-radius: 5px; height:110px; padding:20px 0 0 20px; box-sizing: border-box; box-shadow:inset 0 0 80px #000;}	
+#hpSearchbox .searchBG {position:absolute; width:100%; height:100%; left:0; top:0; z-index:0; border-radius:5px; opacity:0.8; background-image:url('/images/stock/cuts/36.jpg'); background-size:100% auto; filter: blur(1px) grayscale(); background-position:center,center;}
+#hpSearchbox .plPic {position:absolute; right:4px; bottom:4px; width:40px; height:70px; overflow:hidden; z-index:1; opacity:0.9;}
+#hpSearchbox .findYourMusicBlock {background-color:#000; opacity:0.7; width:215px; height:45px; padding:10px 0 0 15px; font-size:24px; color:white; border-radius:5px 0 0 5px; text-shadow: 3px 3px 3px black; float:left; position:relative; z-index:1;}
+
+/* built for musicians */
+#builtMusicians {height:440px; background-image: url('/images/stock/cuts/51.jpg'); background-position:center; background-repeat:no-repeat; background-size:cover; filter:grayscale(90%);} /* background-attachment:fixed; temporarily removed */
+#builtMusicians #bmOverlay {z-index:1; position:absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.4);}
+#builtMusicians #bmTag {z-index:2; box-sizing:border-box; position:absolute; width:1120px; bottom:100px; left:0; right:0; padding-left:500px; margin:auto; font:400 15px/1.8 "Lato", sans-serif; letter-spacing:10px; font-size:25px; color:rgba(255,255,255,0.9);}
+
+/* store */
+#store {height:450px; background:#262626;}
+.storeInfo {display:inline-block; width:438px; margin-right:25px; vertical-align:top; font-size:31px; line-height:40px; color:rgba(255,255,255,0.9); font-style:italic;}
+.storeInfo div {font-size:14px; padding:40px 20px 0 0; text-align:right;}
+.storeAlbum {display:inline-block; position:relative; width:652px;}
+.storeAlbum .saBox {float:left; width:200px; height:220px; margin-right:17px; cursor:pointer;}
+.storeAlbum .saBox .saCover {width:200px; height:200px; background-position:center center; background-size:contain; background-repeat: no-repeat; overflow:hidden; opacity:0.9;}
+	.storeAlbum .saBox:hover .saCover {opacity:1;}
+.storeAlbum .saBox .saAlbumTitle {font-size:11px; color:#555; text-align:center; padding-top:5px;}
+
+/* sign up */
+#signUp {height:740px; background:#fff;}
+#signUp::after {content:""; display:table; clear: both; height:0;}
+#signUp .hpCategory {padding:0;}
+#signUp #suListener {float:left; position:relative; width:500px; height:570px; padding:50px 30px;}
+#signUp #suArtist {float:left; position:relative; width:500px; height:570px; padding:50px 30px;}
+#signUp .listHeader {font-size:32px; color:#444; text-align:center;}
+#signUp .listHeader i {padding-right:10px;}
+#signUp .infoBlock {padding:20px;}
+#signUp .infoBlock p {font-size:14px; color:#555; line-height:20px; padding-bottom:10px;}
+#signUp .hpSignup {position:absolute; bottom:0; left:180px; text-align:center; padding-top:20px;}
+#signUp .hpSignup input {padding:10px; font-size:14px; width:200px;}
+
+/* footer */
+#homepageFooter {background:#262626;}
+#homepageFooter .hpCategory {padding:120px 0 25px 0;}
+#homepageFooter span {padding-right:15px;}
+#homepageFooter span a {color:#ccc; text-decoration:none;}
+#homepageFooter span a:hover {color:#f2f2f2;}
+#homepageFooter div {color:#777; font-size:11px; padding-top:15px;}
