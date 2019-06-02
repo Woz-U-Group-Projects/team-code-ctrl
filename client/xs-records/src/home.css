@@ -83,6 +83,7 @@
 
 body {
     background: #fff
+    
 }
 
 #homepage #header #bgPic {
@@ -139,8 +140,8 @@ body {
     background: #fff
 }
 
-#hpSearchbox {
-    background: linear-gradient(to bottom, #fff 0%, #eee 100%)
+#homepage#hpSearchbox {
+    background: linear-gradient(to bottom, rgb(105, 0, 0) 0%, #eee 100%)
 }
 
 #store {
@@ -152,8 +153,22 @@ body {
 }
 
 #homepageFooter {
-    background: #262626
+    background: #000000
+    bottom
 }
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(28, 61, 151);
+    color: white;
+    text-align: center;
+ }
+
 /* categories */
 #homepage .hpCategoryWrapper {display:flex; position:relative; width:100%; margin:0; padding:0;}
 #homepage .hpCategory {position:relative; width:1120px; margin:auto;}

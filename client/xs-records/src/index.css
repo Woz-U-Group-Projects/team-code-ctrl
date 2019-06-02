@@ -13,7 +13,7 @@ main::before {
     background-image: url('./assets/mixer-sm-fixed.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-color: #83ABCE;
+    background-color: rgb(45, 23, 173);
     content: "";
     display: block;
     position: absolute;
@@ -34,5 +34,26 @@ ol {
 }
 
 .cardText {
-    color: rgb(119, 68, 36);
+    color: rgb(30, 19, 131);
+}
+.p{background-color: rgb(39, 29, 129)}
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(10, 23, 136);
+        color: rgb(39, 29, 129);
+        text-align: center;
+        background-color: blue;
+     }
+
+
+.login{
+    align-self: auto;
+}
+
+#searchBG{
+scrollbar-base-color: blue
 }

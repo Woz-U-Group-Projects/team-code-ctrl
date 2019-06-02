@@ -4,7 +4,7 @@
 
 #hero-image {
     background-image: url("./assets/mixer.jpg");
-    background-color: #83ABCE;
+    background-color: rgb(0, 119, 223);
     height: 100vh;
     width: 100vw;
     background-position: center;
@@ -14,3 +14,14 @@
     z-index: -2;
 }
 
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(26, 58, 56);
+    color: white;
+    text-align: center;
+
+}
