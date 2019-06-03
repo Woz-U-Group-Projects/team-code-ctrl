@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 
+import './index.css'
+
 import App from './components/App';
 import reducers from './reducers';
 
@@ -15,7 +17,7 @@ const store = createStore(
 
 ReactDom.render(
   <Provider store={store}>
-   <App />
- </Provider>,
+  <App />
+</Provider>,
   document.querySelector('#root')
 );
