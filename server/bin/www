@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+const cors = require('./cors');
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
