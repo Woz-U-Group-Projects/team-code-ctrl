@@ -14,6 +14,8 @@ class Home extends Component {
                         <p className="text-center font-weight-500 xsrText" >XS Records is the easiest way for musicians to get music onto Spotify, iTunes, Amazon, Google Play, Tidal, and more.</p>
                     </div>
                 </div>
+
+                <br/>
                 <div>
                     <div className='news'>
                         <div className='newsBody'>

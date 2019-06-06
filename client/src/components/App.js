@@ -30,9 +30,9 @@ const App = () => {
           <Route path="/albums/show" exact component={AlbumShow} />
         </div>
       </Router>
-      <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"></link>
-    <div id="hero-image"></div>
       <main role="main" className="App">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link> 
         <div id="hero-image"></div>
       </main>
     </div>

@@ -28,11 +28,3 @@ main::before {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
-ol {
-    text-shadow: none;
-}
-
-.cardText {
-    color: #9A9592;
-}
